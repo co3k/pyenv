@@ -1,0 +1,31 @@
+diff --git ./Modules/_localemodule.c ./Modules/_localemodule.c
+index 7e475da..812bcf7 100644
+--- ./Modules/_localemodule.c
++++ ./Modules/_localemodule.c
+@@ -32,7 +32,7 @@ This software comes with no warranty. Use at your own risk.
+ #include <wchar.h>
+ #endif
+ 
+-#if defined(__APPLE__)
++#if 0
+ #include <CoreFoundation/CoreFoundation.h>
+ #endif
+ 
+@@ -412,7 +412,7 @@ PyLocale_getdefaultlocale(PyObject* self)
+ }
+ #endif
+ 
+-#if defined(__APPLE__)
++#if 0
+ /*
+ ** Find out what the current script is.
+ ** Donated by Fredrik Lundh.
+@@ -689,7 +689,7 @@ static struct PyMethodDef PyLocale_Methods[] = {
+    METH_VARARGS, strcoll__doc__},
+   {"strxfrm", (PyCFunction) PyLocale_strxfrm,
+    METH_VARARGS, strxfrm__doc__},
+-#if defined(MS_WINDOWS) || defined(__APPLE__)
++#if defined(MS_WINDOWS) || 0
+   {"_getdefaultlocale", (PyCFunction) PyLocale_getdefaultlocale, METH_NOARGS},
+ #endif
+ #ifdef HAVE_LANGINFO_H
