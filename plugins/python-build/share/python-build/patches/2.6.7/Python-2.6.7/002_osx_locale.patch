@@ -1,3 +1,16 @@
+diff --git a/Lib/locale.py b/Lib/locale.py
+index df5ab39..db2a3af 100644
+--- ./Lib/locale.py
++++ ./Lib/locale.py
+@@ -522,7 +522,7 @@ def resetlocale(category=LC_ALL):
+     """
+     _setlocale(category, _build_localename(getdefaultlocale()))
+ 
+-if sys.platform in ('win32', 'darwin', 'mac'):
++if sys.platform in ('win32', 'mac'):
+     # On Win32, this will return the ANSI code page
+     # On the Mac, it should return the system encoding;
+     # it might return "ascii" instead
 diff --git ./Modules/_localemodule.c ./Modules/_localemodule.c
 index 7e475da..812bcf7 100644
 --- ./Modules/_localemodule.c
